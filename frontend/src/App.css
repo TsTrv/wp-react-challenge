@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.post {
+  background-color: #f5f0ea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.post h3 {
+  color: #24b768;
+}
+
+.post a {
+  cursor: pointer;
+  color: #fdb436;
+}

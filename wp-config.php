@@ -18,7 +18,10 @@ $env = [];
 
 $fh = fopen(dirname( __FILE__ ) . '/.env', 'r');
 while(!feof($fh)) {
-	putenv( trim( fgets($fh) ) );
+	$var = trim( fgets($fh) );
+	if (!empty($var)) {
+		putenv( $var );
+	}
 }
 
 fclose($fh);
