@@ -17,7 +17,7 @@ function Posts() {
     }
 
     getPostsFromWp();
-    
+    // console.log(posts)
     return (
         <div>
             { (! posts.length) && (
@@ -27,7 +27,7 @@ function Posts() {
             { (posts.length) && (
                 <div>
                     <h2> Posts on this site: </h2>
-                    { posts.map(post => <Post ID={post.ID} title={post.title} content={post.content} excerpt={post.excerpt} />) }
+                    { posts.map(post => <Post ID={post.id} title={post.title} content={post.content} excerpt={post.excerpt} />) }
                 </div>
             ) }
         </div>

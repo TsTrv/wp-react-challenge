@@ -1,16 +1,16 @@
-
 export function wpFetch (endpoint) {
-    const requestOptions = {
-        method: 'GET'
-        // headers: { 
-        //     'Content-Type': 'application/json',
-        //     'Authorization': 'Bearer my-token',
-        //     'My-Custom-Header': 'foobar'
-        // },
-        // body: JSON.stringify({ title: 'React POST Request Example' })
-    };
-
-    return fetch(`${process.env.REACT_APP_WP_HOST}/wp-json/wp/v2/${endpoint}`, requestOptions);
+    // const requestOptions = {
+    //     method: 'GET'
+    //     // headers: { 
+    //     //     'Content-Type': 'application/json',
+    //     //     'Authorization': 'Bearer my-token',
+    //     //     'My-Custom-Header': 'foobar'
+    //     // },
+    //     // body: JSON.stringify({ title: 'React POST Request Example' })
+    // };
+    
+    return fetch(`http://${process.env.REACT_APP_WP_HOST}/wp-json/wp/v2/${endpoint}`);
+    
 }
 
 export function fetchPosts (id) {
